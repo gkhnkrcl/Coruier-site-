@@ -1,0 +1,98 @@
+@media screen and (max-width: 570px) {
+
+    .addressSection{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+ 
+        margin-top: 5rem;
+       row-gap: 3rem;
+     
+     }
+
+     .motor_slogan{
+         display:none;
+     }
+     #nav-links{
+        display: none;
+        position: absolute;
+        top: 10rem;
+
+        margin: 2rem 0 0 0rem ;
+     
+     }
+  
+       .fa-bars{
+        display: block !important;
+        margin: auto 0;
+        transform: scale(3);
+        color: white;
+    }
+
+   
+        
+        
+
+  
+}
+@media screen and (min-width: 570px) and (max-width: 768px) {
+    
+    .addressSection{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+ 
+        margin-top: 5rem;
+       row-gap: 3rem;
+     
+     }
+
+     .motor_slogan{
+         display:none;
+     }
+     #nav-links{
+           
+        display: none ;
+     }
+     .fa-bars{
+        display: block !important;
+        margin: auto 0;
+        transform: scale(3);
+        color: white;
+    }
+    #nav-links{
+        display: none;
+        position: absolute;
+        top: 10rem;
+        width: 100%;
+        margin: 2rem 0 0 15rem ;
+
+
+     }
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 828px) {
+    .motor_slogan{
+        display:none;
+    }
+ 
+}
+
+@media screen and (min-width: 828px) and (max-width: 879px) {
+
+    .motor_slogan{
+        display:none;
+    }
+}
+ 
+@media screen and (min-width: 879px) and (max-width: 992px) {
+    .motor_slogan{
+        display:none;
+    }
+ 
+}
+
+@media screen and (min-width: 992px) and (max-width: 1020px){
+}

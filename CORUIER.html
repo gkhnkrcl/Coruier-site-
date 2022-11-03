@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>COURIER</title>
+
+    <link rel="stylesheet" href="coruier.css" />
+
+    <link rel="stylesheet" href="mobil.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div id="logo-box">
+          <i class="fa-solid fa-child-reaching"></i>
+          <a href="#" class="logo text-uppercase"> COURİER </a>
+          <p class="logo-slogan">
+            <small> "Güvenli Ve Hızlı Teslimat!"</small>
+          </p>
+        </div>
+
+        <div id="nav-links" class="responsive">
+          <ul>
+            <li class="nav-item text-uppercase">
+              <a href=".ytp-large-play-button ytp-button ytp-large-play-button-red-bg" class="nav-link">
+                BİZ KİMİZ
+                <i class="fa-solid fa-circle-question"></i>
+              </a>
+            </li>
+            <li class="nav-item text-uppercase">
+              <a href="#map-section" class="nav-link">
+                KURYE ÇAĞIR
+                <i class="fa-solid fa-face-smile-wink"></i>
+              </a>
+            </li>
+            <li class="nav-item text-uppercase">
+              <a href="#phoneFont" class="nav-link">
+                İLETİŞİM
+                <i class="fa-solid fa-square-phone"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+
+    <br /><br /><br />
+
+    <header>
+      <section class="addressSection">
+        <form class="mapAll">
+          <div class="map-border">
+            <br />
+            <div class="map-search">
+              <label for="from"></label>
+              <input
+                type="text"
+                id="from"
+                placeholder="ÇIKIŞ"
+                class="mapFrom"
+              />
+            </div>
+            <br />
+            <div class="map-search">
+              <label for="to"></label>
+              <input type="text" id="to" placeholder="VARIŞ" class="mapTo" />
+            </div>
+            <div class="buttons">
+              <button class="button" type="click" onclick="calcRoute();">
+                <a
+                  href="#address_section"
+                  style="color: white"
+                  onclick="calcRoute();"
+                  >Kurye Çağır</a
+                >
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div class="side_address_section">
+          <div id="output">
+            <table class="output_table">
+              <tr class="output_row">
+                <th class="row1">Çıkış Adresi</th>
+                <th class="row2">Varış Adresi</th>
+                <th class="row3">Mesafe</th>
+                <th class="row4">Süre</th>
+                <th class="row5">Ücret</th>
+              </tr>
+              <tbody class="output_col"></tbody>
+            </table>
+          </div>
+          <div class="motor_slogan">
+            <div class="motor_animate">
+              <p class="m_slogan">Güvenli ve Hızlı Teslimat</p>
+              <i class="fa-solid fa-motorcycle"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section class="map_section">
+      <div id="googleMap"></div>
+    </section>
+
+    <p class="line1"></p>
+
+    <div class="copyright">
+      <div class="container">
+        <small>Copyright © Your Website 2022</small>
+      </div>
+    </div>
+
+    <script src="message.js"></script>
+    <script src="ui.js"></script>
+    <script src="storage.js"></script>
+    <script src="project1.js"></script>
+    <script>
+      $(".fa-bars").click(function () {
+        $("#nav-links").toggle(".responsive");
+      });
+
+      //BUTTON //
+      $(".btns").click(function () {
+        $(".hideText").hide(function () {});
+        $(".btns").css("width", "5rem");
+        setTimeout(function () {
+          $(".btns").css("width", "11rem");
+        }, 1500);
+        setTimeout(function () {
+          $(".hideText").show(function () {});
+        }, 1600);
+        return true;
+      });
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCglrzEbBzJzh_qHpU_aZCxPkhqfgahtmQ&libraries=places"></script>
+    <script src="map.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
